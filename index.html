@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Manager - Tu Lista de Misiones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quest manager</h1>
+            <p class="subtitle">Completa tus misiones diarias</p>
+            <div class="stats">
+                <span class="stat">Misiones completadas: <strong id="completed-count">0</strong></span>
+                <span class="stat">Misiones activas: <strong id="active-count">0</strong></span>
+            </div>
+        </header>
+
+        <main>
+            <section class="quest-form">
+                <input type="text" id="quest-input" placeholder="Escribe tu nueva misión..." maxlength="100">
+                <button id="add-btn" class="btn-primary">
+                    Agregar mision
+                </button>
+            </section>
+
+            <section class="quests-container">
+                <h2>Misiones activas</h2>
+                <ul id="quest-list" class="quest-list">
+                </ul>
+                <p id="empty-message" class="empty-message">
+                    ¡No hay misiones! Comienza agregando una nueva mision
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Creado por Manuel Vega Viñuelas</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

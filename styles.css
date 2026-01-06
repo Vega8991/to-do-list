@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #7790ff 0%, #3b1b5c 100%);
+    min-height: 100vh;
+    padding: 20px;
+    align-content: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #8597e6, #bc78ff);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.stat strong {
+    font-size: 1.2rem;
+}
+
+main {
+    padding: 30px;
+}
+
+.quest-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#quest-input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+#quest-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.btn-primary {
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.quests-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.quest-list {
+    list-style: none;
+}
+
+.quest-item {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s;
+    border-left: 4px solid #667eea;
+}
+
+.quest-item:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(5px);
+}
+
+.quest-text {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+    word-break: break-word;
+}
+
+.quest-item.completed {
+    background: #e8f5e9;
+    border-left-color: #4caf50;
+    opacity: 0.7;
+}
+
+.quest-item.completed .quest-text {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.quest-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-complete {
+    padding: 8px 15px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-complete:hover {
+    background: #45a049;
+}
+
+.btn-delete {
+    padding: 8px 15px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-delete:hover {
+    background: #da190b;
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 40px;
+    display: none;
+}
+
+.empty-message.show {
+    display: block;
+}
+
+footer {
+    background: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .quest-form {
+        flex-direction: column;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .quest-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .quest-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
